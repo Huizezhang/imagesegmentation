@@ -52,3 +52,24 @@ def hsv_to_rgb_cv(hsv_color):
     hsv_color_cv = np.array([b, g, r], dtype=np.uint8)
 
     return hsv_color_cv
+
+def merge_small_parts(sizes, labels, threshold):
+    """
+    Merge the parts smaller than the threshold into "Others".
+    """
+    new_sizes = []
+    new_labels = []
+    other_size = 0
+
+    for size, label in zip(sizes, labels):
+        if size >= threshold:
+            new_sizes.append(size)
+            new_labels.append(label)
+        else:
+            other_size += size
+
+    if other_size > 0:
+        new_sizes.append(other_size)
+        new_labels.append('Other')
+
+    return new_sizes, new_labels
