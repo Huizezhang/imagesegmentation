@@ -27,9 +27,11 @@ with row3_1:
     st.markdown(
         "2. A pie chart showing the proportion of different objects occupying the picture.")
     st.markdown(
-        "3. A histogram representing the number of important objects in the picture.")
+        "3. A histogram representing the number of important objects(e.g. cars or pedestrians) in the picture.")
     st.markdown(
-        "3. A histogram representing the number of important objects in the picture.")
+        "4. A heat map showing how the objects(e.g. cars or pedestrians) in the image are distributed across all data.")
+    st.markdown(
+        "5. A histogram showing how objects(e.g. cars or pedestrians) are distributed in the data set..")
 
 
 
@@ -54,9 +56,7 @@ for scene_id in scene_id_list:
     with open(save_json, 'r') as in_file:
         scene = jsonpickle.decode(in_file.read())
 
-
-    pil_image = Image.open(scene.image_path)
-    image_origin = cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
+    image_origin = cv2.imread(scene.image_path)
     class_dict = collections.defaultdict(float)
 
     for obj in scene.objectlist:
