@@ -7,7 +7,7 @@ import streamlit as st
 import plotly.graph_objs as go
 from Segmentation.helper import hsv_to_rgb_cv, merge_small_parts
 from Segmentation.Objectclass import class_list
-
+from PIL import Image
 
 st.set_page_config(page_title="Image Segmentation A2D2 Dataset", layout="wide")
 
@@ -53,7 +53,10 @@ for scene_id in scene_id_list:
     save_json = os.path.join(os.path.join(output_folder_path, scene_id), f'{scene_id}.json')
     with open(save_json, 'r') as in_file:
         scene = jsonpickle.decode(in_file.read())
-    image_origin = cv2.imread(scene.image_path)
+
+
+    pil_image = Image.open(scene.image_path)
+    image_origin = cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
     class_dict = collections.defaultdict(float)
 
     for obj in scene.objectlist:
