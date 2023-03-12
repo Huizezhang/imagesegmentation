@@ -8,7 +8,32 @@ import plotly.graph_objs as go
 from Segmentation.helper import hsv_to_rgb_cv, merge_small_parts
 from Segmentation.Objectclass import class_list
 
-output_folder_path = 'result'
+
+st.set_page_config(page_title="Image Segmentation A2D2 Dataset", layout="wide")
+
+row0_spacer1, row0_1, row0_spacer2, row0_2, row0_spacer3 = st.columns((.1, 2.3, .1, 1.3, .1))
+with row0_1:
+    st.title('Image Segmentation for A2D2 Dataset')
+with row0_2:
+    st.text("")
+    st.subheader('Streamlit App by Huize Zhang. View source code [here](https://github.com/Huizezhang/imagesegmentation).')
+row3_spacer1, row3_1, row3_spacer2 = st.columns((.1, 3.2, .1))
+with row3_1:
+    st.markdown(
+        "This APP is based on the preview dataset of [A2D2 dataset](https://www.a2d2.audi/a2d2/en/dataset.html) from Audi. The dataset provides photos taken by on-board cameras and corresponding semantic segmentation information. The following functions are provided:")
+
+    st.markdown(
+        "1. Classify and label objects on photos.")
+    st.markdown(
+        "2. A pie chart showing the proportion of different objects occupying the picture.")
+    st.markdown(
+        "3. A histogram representing the number of important objects in the picture.")
+    st.markdown(
+        "3. A histogram representing the number of important objects in the picture.")
+
+
+
+output_folder_path = './result'
 save_json = os.path.join(output_folder_path, 'scene_id_list.json')
 with open(save_json, 'r') as in_file:
     scene_id_list = jsonpickle.decode(in_file.read())
@@ -66,7 +91,7 @@ for scene_id in scene_id_list:
     normalized_values = [x * factor for x in normalized]
     fig = go.Figure(data=[go.Pie(labels=new_labels, values=normalized_values)])
     fig.update_layout(title='Piechart with categories and percentages')
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_column_width=True)
 
     class_count = {key: value for key, value in class_count.items() if value != 0}
     data = [go.Bar(x=list(class_count.keys()), y=list(class_count.values()))]
@@ -74,4 +99,4 @@ for scene_id in scene_id_list:
     # 设置布局
     layout = go.Layout(title='柱状图', xaxis=dict(title='类别'), yaxis=dict(title='数据'))
 
-    st.plotly_chart(data)
+    st.plotly_chart(data, use_column_width=True)
