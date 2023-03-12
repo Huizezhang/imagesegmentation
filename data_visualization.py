@@ -55,7 +55,7 @@ for scene_id in scene_id_list:
     save_json = os.path.join(os.path.join(output_folder_path, scene_id), f'{scene_id}.json')
     with open(save_json, 'r') as in_file:
         scene = jsonpickle.decode(in_file.read())
-
+    scene.image_path = scene.image_path.replace("\\", "/")
     image_origin = cv2.imread(scene.image_path)
     class_dict = collections.defaultdict(float)
 
