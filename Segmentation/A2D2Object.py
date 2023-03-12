@@ -16,4 +16,6 @@ class A2D2_Object:
         self.classname = None
         self.pixelcount = None
         self.percentage = None
-        self.contour = None
+        self.contours = list()
+        self.block_path = None
+        self.lines = list()
