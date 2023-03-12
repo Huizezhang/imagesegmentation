@@ -1,0 +1,6 @@
+jsonpickle~=2.2.0
+opencv-python~=4.7.0.72
+numpy~=1.23.4
+shapely~=1.8.4
+streamlit~=1.19.0
+plotly~=5.9.0
