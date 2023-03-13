@@ -7,7 +7,7 @@ import streamlit as st
 import plotly.graph_objs as go
 from Segmentation.helper import hsv_to_rgb_cv, merge_small_parts
 from Segmentation.Objectclass import class_list
-from sklearn.preprocessing import MinMaxScaler
+
 
 
 st.set_page_config(page_title="Image Segmentation A2D2 Dataset", layout="wide")
