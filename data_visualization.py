@@ -7,7 +7,8 @@ import streamlit as st
 import plotly.graph_objs as go
 from Segmentation.helper import hsv_to_rgb_cv, merge_small_parts
 from Segmentation.Objectclass import class_list
-from PIL import Image
+from sklearn.preprocessing import MinMaxScaler
+
 
 st.set_page_config(page_title="Image Segmentation A2D2 Dataset", layout="wide")
 
@@ -31,7 +32,7 @@ with row3_1:
     st.markdown(
         "4. A heat map showing how the objects(e.g. cars or pedestrians) in the image are distributed across all data.")
     st.markdown(
-        "5. A histogram showing how objects(e.g. cars or pedestrians) are distributed in the data set..")
+        "5. A histogram showing how objects(e.g. cars or pedestrians) are distributed in the data set.")
 
 
 
@@ -49,6 +50,7 @@ with row3_1:
 scene_index = scene_id_list.index(selected_scene)
 class_count = {"Car": 0, "Bicycle": 0, "Pedestrian": 0, "Truck": 0, "Small vehicles": 0,
                "Traffic signal": 0, "Traffic sign": 0, "Animals": 0, "Utility vehicle": 0}
+
 
 for scene_id in scene_id_list:
     if scene_id != selected_scene:
@@ -80,10 +82,11 @@ for scene_id in scene_id_list:
             color = (0, 0, 255)
             text_size, _ = cv2.getTextSize(text, font, fontScale, thickness)
             text_x = int((x + x+w) / 2 - text_size[0] / 2)
-            text_y = y - 10  # 将文本的起始坐标设置在矩形的上方
-            cv2.putText(image_origin, text, (text_x, text_y), font, fontScale, color, thickness, cv2.LINE_AA)
+            text_y = y - 10
+            #cv2.putText(image_origin, text, (text_x, text_y), font, fontScale, color, thickness, cv2.LINE_AA)
 
             cv2.rectangle(image_origin, (x, y), (x + w, y + h), (255,255,255), 1)
+
     image_origin = cv2.cvtColor(image_origin, cv2.COLOR_BGR2RGB)
     with row3_1:
         st.image(image_origin, caption='Image for {}'.format(scene.image_path), use_column_width=True)
@@ -103,7 +106,47 @@ for scene_id in scene_id_list:
     class_count = {key: value for key, value in class_count.items() if value != 0}
     data = [go.Bar(x=list(class_count.keys()), y=list(class_count.values()))]
 
-    # 设置布局
-    layout = go.Layout(title='柱状图', xaxis=dict(title='类别'), yaxis=dict(title='数据'))
+
+    layout = go.Layout(title='histogram', xaxis=dict(title='histogram'), yaxis=dict(title='histogram'))
     with row3_1:
         st.plotly_chart(data, use_column_width=True)
+
+with row3_1:
+    class_name = set(list(class_list.values()))
+    selected_class2 = st.selectbox('Select Class for heatmap', list(class_name))
+    selected_class3 = st.selectbox('Select Class for histogram', list(class_name))
+
+heatmapdata = list()
+histogramdata = collections.defaultdict(int)
+for scene_id in scene_id_list:
+    for hex_color in class_list:
+        if class_list[hex_color] == selected_class2:
+            save_masks = os.path.join(os.path.join(output_folder_path, scene_id), "masks")
+            mask_path = os.path.join(save_masks,f"{selected_class2}_{hex_color}.png")
+            mask_path = mask_path.replace("\\", "/")
+            img = cv2.imread(mask_path)
+            gaussian_blur = cv2.GaussianBlur(img, (11,11), 5)
+            img_g = cv2.cvtColor(cv2.rotate(gaussian_blur, cv2.ROTATE_180), cv2.COLOR_BGR2GRAY)
+            heatmapdata.append(img_g)
+    save_json = os.path.join(os.path.join(output_folder_path, scene_id), f'{scene_id}.json')
+    with open(save_json, 'r') as in_file:
+        scene = jsonpickle.decode(in_file.read())
+    count = 0
+    for obj in scene.objectlist:
+        if obj.classname == selected_class3:
+            count += 1
+
+
+    histogramdata[count] += 1
+
+
+
+heatmapdata = np.sum(heatmapdata,axis=0)
+
+heatmap = go.Figure(data=go.Heatmap(z=heatmapdata, colorscale="Jet"))
+
+with row3_1:
+    st.plotly_chart(heatmap)
+    data = [go.Bar(x=list(histogramdata.keys()), y=list(histogramdata.values()))]
+    st.plotly_chart(data, use_column_width=True)
+
