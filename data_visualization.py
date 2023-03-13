@@ -40,9 +40,11 @@ save_json = os.path.join(output_folder_path, 'scene_id_list.json')
 with open(save_json, 'r') as in_file:
     scene_id_list = jsonpickle.decode(in_file.read())
 
-selected_scene = st.selectbox('Select Scene', scene_id_list)
-class_name = set(list(class_list.values()))
-selected_class = st.selectbox('Select Class', list(class_name))
+with row3_1:
+    class_name = set(list(class_list.values()))
+    selected_scene = st.selectbox('Select Scene', scene_id_list)
+    selected_class = st.selectbox('Select Class', list(class_name))
+    
 
 scene_index = scene_id_list.index(selected_scene)
 class_count = {"Car": 0, "Bicycle": 0, "Pedestrian": 0, "Truck": 0, "Small vehicles": 0,
@@ -83,7 +85,8 @@ for scene_id in scene_id_list:
 
             cv2.rectangle(image_origin, (x, y), (x + w, y + h), (255,255,255), 1)
     image_origin = cv2.cvtColor(image_origin, cv2.COLOR_BGR2RGB)
-    st.image(image_origin, caption='Image for {}'.format(scene.image_path), use_column_width=True)
+    with row3_1:
+        st.image(image_origin, caption='Image for {}'.format(scene.image_path), use_column_width=True)
     labels = list(class_dict.keys())
     values = list(class_dict.values())
     new_sizes, new_labels = merge_small_parts(values, labels, 1)
@@ -94,12 +97,13 @@ for scene_id in scene_id_list:
     normalized_values = [x * factor for x in normalized]
     fig = go.Figure(data=[go.Pie(labels=new_labels, values=normalized_values)])
     fig.update_layout(title='Piechart with categories and percentages')
-    st.plotly_chart(fig, use_column_width=True)
+    with row3_1:
+        st.plotly_chart(fig, use_column_width=True)
 
     class_count = {key: value for key, value in class_count.items() if value != 0}
     data = [go.Bar(x=list(class_count.keys()), y=list(class_count.values()))]
 
     # 设置布局
     layout = go.Layout(title='柱状图', xaxis=dict(title='类别'), yaxis=dict(title='数据'))
-
-    st.plotly_chart(data, use_column_width=True)
+    with row3_1:
+        st.plotly_chart(data, use_column_width=True)
