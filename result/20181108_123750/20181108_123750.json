@@ -447,7 +447,7 @@
                     ]
                 }
             ],
-            "block_path": "result\\20181108_123750\\masks\\Sidebars\\Sidebars_2.png",
+            "block_path": "result\\20181108_123750\\masks\\Sidebars\\Sidebars_4.png",
             "lines": [
                 [
                     {
@@ -809,6 +809,203 @@
             },
             "object_id": 3,
             "classname": "Sidebars",
+            "pixelcount": 108,
+            "percentage": 4.6564569536423844e-05,
+            "contours": [
+                {
+                    "py/reduce": [
+                        {
+                            "py/function": "numpy.core.multiarray._reconstruct"
+                        },
+                        {
+                            "py/tuple": [
+                                {
+                                    "py/type": "numpy.ndarray"
+                                },
+                                {
+                                    "py/tuple": [
+                                        0
+                                    ]
+                                },
+                                {
+                                    "py/b64": "Yg=="
+                                }
+                            ]
+                        },
+                        {
+                            "py/tuple": [
+                                1,
+                                {
+                                    "py/tuple": [
+                                        12,
+                                        1,
+                                        2
+                                    ]
+                                },
+                                {
+                                    "py/id": 7
+                                },
+                                false,
+                                {
+                                    "py/b64": "WgMAAKgCAABaAwAArwIAAFsDAACwAgAAWwMAAL8CAABcAwAAwAIAAFwDAADDAgAAXwMAAMMCAABfAwAAwgIAAF4DAADBAgAAXgMAALICAABdAwAAsQIAAF0DAACoAgAA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "block_path": "result\\20181108_123750\\masks\\Sidebars\\Sidebars_5.png",
+            "lines": [
+                [
+                    {
+                        "py/reduce": [
+                            {
+                                "py/function": "numpy.core.multiarray.scalar"
+                            },
+                            {
+                                "py/tuple": [
+                                    {
+                                        "py/id": 7
+                                    },
+                                    {
+                                        "py/b64": "XAMAAA=="
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "py/reduce": [
+                            {
+                                "py/function": "numpy.core.multiarray.scalar"
+                            },
+                            {
+                                "py/tuple": [
+                                    {
+                                        "py/id": 7
+                                    },
+                                    {
+                                        "py/b64": "pwIAAA=="
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "py/reduce": [
+                            {
+                                "py/function": "numpy.core.multiarray.scalar"
+                            },
+                            {
+                                "py/tuple": [
+                                    {
+                                        "py/id": 7
+                                    },
+                                    {
+                                        "py/b64": "XwMAAA=="
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "py/reduce": [
+                            {
+                                "py/function": "numpy.core.multiarray.scalar"
+                            },
+                            {
+                                "py/tuple": [
+                                    {
+                                        "py/id": 7
+                                    },
+                                    {
+                                        "py/b64": "wwIAAA=="
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "py/reduce": [
+                            {
+                                "py/function": "numpy.core.multiarray.scalar"
+                            },
+                            {
+                                "py/tuple": [
+                                    {
+                                        "py/id": 7
+                                    },
+                                    {
+                                        "py/b64": "WgMAAA=="
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "py/reduce": [
+                            {
+                                "py/function": "numpy.core.multiarray.scalar"
+                            },
+                            {
+                                "py/tuple": [
+                                    {
+                                        "py/id": 7
+                                    },
+                                    {
+                                        "py/b64": "qAIAAA=="
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "py/reduce": [
+                            {
+                                "py/function": "numpy.core.multiarray.scalar"
+                            },
+                            {
+                                "py/tuple": [
+                                    {
+                                        "py/id": 7
+                                    },
+                                    {
+                                        "py/b64": "WwMAAA=="
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "py/reduce": [
+                            {
+                                "py/function": "numpy.core.multiarray.scalar"
+                            },
+                            {
+                                "py/tuple": [
+                                    {
+                                        "py/id": 7
+                                    },
+                                    {
+                                        "py/b64": "wgIAAA=="
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "py/object": "Segmentation.A2D2Object.A2D2_Object",
+            "color_hex": "#e96400",
+            "color_hsv": {
+                "py/id": 3
+            },
+            "object_id": 4,
+            "classname": "Sidebars",
             "pixelcount": 415,
             "percentage": 0.00017892866997792496,
             "contours": [
@@ -895,7 +1092,7 @@
                     ]
                 }
             ],
-            "block_path": "result\\20181108_123750\\masks\\Sidebars\\Sidebars_3.png",
+            "block_path": "result\\20181108_123750\\masks\\Sidebars\\Sidebars_6.png",
             "lines": [
                 [
                     {
@@ -1171,203 +1368,6 @@
                                     },
                                     {
                                         "py/b64": "qAIAAA=="
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            ]
-        },
-        {
-            "py/object": "Segmentation.A2D2Object.A2D2_Object",
-            "color_hex": "#e96400",
-            "color_hsv": {
-                "py/id": 3
-            },
-            "object_id": 5,
-            "classname": "Sidebars",
-            "pixelcount": 108,
-            "percentage": 4.6564569536423844e-05,
-            "contours": [
-                {
-                    "py/reduce": [
-                        {
-                            "py/function": "numpy.core.multiarray._reconstruct"
-                        },
-                        {
-                            "py/tuple": [
-                                {
-                                    "py/type": "numpy.ndarray"
-                                },
-                                {
-                                    "py/tuple": [
-                                        0
-                                    ]
-                                },
-                                {
-                                    "py/b64": "Yg=="
-                                }
-                            ]
-                        },
-                        {
-                            "py/tuple": [
-                                1,
-                                {
-                                    "py/tuple": [
-                                        12,
-                                        1,
-                                        2
-                                    ]
-                                },
-                                {
-                                    "py/id": 7
-                                },
-                                false,
-                                {
-                                    "py/b64": "WgMAAKgCAABaAwAArwIAAFsDAACwAgAAWwMAAL8CAABcAwAAwAIAAFwDAADDAgAAXwMAAMMCAABfAwAAwgIAAF4DAADBAgAAXgMAALICAABdAwAAsQIAAF0DAACoAgAA"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "block_path": "result\\20181108_123750\\masks\\Sidebars\\Sidebars_5.png",
-            "lines": [
-                [
-                    {
-                        "py/reduce": [
-                            {
-                                "py/function": "numpy.core.multiarray.scalar"
-                            },
-                            {
-                                "py/tuple": [
-                                    {
-                                        "py/id": 7
-                                    },
-                                    {
-                                        "py/b64": "XAMAAA=="
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "py/reduce": [
-                            {
-                                "py/function": "numpy.core.multiarray.scalar"
-                            },
-                            {
-                                "py/tuple": [
-                                    {
-                                        "py/id": 7
-                                    },
-                                    {
-                                        "py/b64": "pwIAAA=="
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "py/reduce": [
-                            {
-                                "py/function": "numpy.core.multiarray.scalar"
-                            },
-                            {
-                                "py/tuple": [
-                                    {
-                                        "py/id": 7
-                                    },
-                                    {
-                                        "py/b64": "XwMAAA=="
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "py/reduce": [
-                            {
-                                "py/function": "numpy.core.multiarray.scalar"
-                            },
-                            {
-                                "py/tuple": [
-                                    {
-                                        "py/id": 7
-                                    },
-                                    {
-                                        "py/b64": "wwIAAA=="
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                [
-                    {
-                        "py/reduce": [
-                            {
-                                "py/function": "numpy.core.multiarray.scalar"
-                            },
-                            {
-                                "py/tuple": [
-                                    {
-                                        "py/id": 7
-                                    },
-                                    {
-                                        "py/b64": "WgMAAA=="
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "py/reduce": [
-                            {
-                                "py/function": "numpy.core.multiarray.scalar"
-                            },
-                            {
-                                "py/tuple": [
-                                    {
-                                        "py/id": 7
-                                    },
-                                    {
-                                        "py/b64": "qAIAAA=="
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "py/reduce": [
-                            {
-                                "py/function": "numpy.core.multiarray.scalar"
-                            },
-                            {
-                                "py/tuple": [
-                                    {
-                                        "py/id": 7
-                                    },
-                                    {
-                                        "py/b64": "WwMAAA=="
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "py/reduce": [
-                            {
-                                "py/function": "numpy.core.multiarray.scalar"
-                            },
-                            {
-                                "py/tuple": [
-                                    {
-                                        "py/id": 7
-                                    },
-                                    {
-                                        "py/b64": "wgIAAA=="
                                     }
                                 ]
                             }
@@ -5573,6 +5573,118 @@
             },
             "object_id": 2,
             "classname": "RD normal street",
+            "pixelcount": 183,
+            "percentage": 7.89010761589404e-05,
+            "contours": [
+                {
+                    "py/reduce": [
+                        {
+                            "py/function": "numpy.core.multiarray._reconstruct"
+                        },
+                        {
+                            "py/tuple": [
+                                {
+                                    "py/type": "numpy.ndarray"
+                                },
+                                {
+                                    "py/tuple": [
+                                        0
+                                    ]
+                                },
+                                {
+                                    "py/b64": "Yg=="
+                                }
+                            ]
+                        },
+                        {
+                            "py/tuple": [
+                                1,
+                                {
+                                    "py/tuple": [
+                                        90,
+                                        1,
+                                        2
+                                    ]
+                                },
+                                {
+                                    "py/id": 7
+                                },
+                                false,
+                                {
+                                    "py/b64": "LwQAAOUCAAAuBAAA5gIAACsEAADmAgAAKgQAAOcCAAAnBAAA5wIAACYEAADoAgAAIwQAAOgCAAAiBAAA6QIAAB8EAADpAgAAHgQAAOoCAAAaBAAA6gIAABkEAADrAgAAFgQAAOsCAAAVBAAA7AIAABIEAADsAgAAEQQAAO0CAAAOBAAA7QIAAA0EAADuAgAACgQAAO4CAAAJBAAA7wIAAAYEAADvAgAABQQAAPACAAABBAAA8AIAAAAEAADxAgAA/QMAAPECAAD8AwAA8gIAAPkDAADyAgAA+AMAAPMCAAD1AwAA8wIAAPQDAAD0AgAA8QMAAPQCAADwAwAA9QIAAO0DAAD1AgAA7AMAAPYCAADpAwAA9gIAAOgDAAD3AgAA5AMAAPcCAADjAwAA+AIAAOADAAD4AgAA3wMAAPkCAADcAwAA+QIAANsDAAD6AgAA2AMAAPoCAADXAwAA+wIAANQDAAD7AgAA1wMAAPsCAADYAwAA+gIAANwDAAD6AgAA3QMAAPkCAADhAwAA+QIAAOIDAAD4AgAA5QMAAPgCAADmAwAA9wIAAOoDAAD3AgAA6wMAAPYCAADvAwAA9gIAAPADAAD1AgAA8wMAAPUCAAD0AwAA9AIAAPgDAAD0AgAA+QMAAPMCAAD9AwAA8wIAAP4DAADyAgAAAgQAAPICAAADBAAA8QIAAAYEAADxAgAABwQAAPACAAALBAAA8AIAAAwEAADvAgAAEAQAAO8CAAARBAAA7gIAABQEAADuAgAAFQQAAO0CAAAZBAAA7QIAABoEAADsAgAAHQQAAOwCAAAeBAAA6wIAACAEAADrAgAAIQQAAOoCAAAjBAAA6gIAACQEAADpAgAAJgQAAOkCAAAnBAAA6AIAACkEAADoAgAAKgQAAOcCAAArBAAA5wIAACwEAADmAgAALgQAAOYCAAAvBAAA5QIAADAEAADlAgAA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "block_path": "result\\20181108_123750\\masks\\RD normal street\\RD normal street_3.png",
+            "lines": []
+        },
+        {
+            "py/object": "Segmentation.A2D2Object.A2D2_Object",
+            "color_hex": "#ff00ff",
+            "color_hsv": {
+                "py/id": 377
+            },
+            "object_id": 3,
+            "classname": "RD normal street",
+            "pixelcount": 240,
+            "percentage": 0.00010347682119205298,
+            "contours": [
+                {
+                    "py/reduce": [
+                        {
+                            "py/function": "numpy.core.multiarray._reconstruct"
+                        },
+                        {
+                            "py/tuple": [
+                                {
+                                    "py/type": "numpy.ndarray"
+                                },
+                                {
+                                    "py/tuple": [
+                                        0
+                                    ]
+                                },
+                                {
+                                    "py/b64": "Yg=="
+                                }
+                            ]
+                        },
+                        {
+                            "py/tuple": [
+                                1,
+                                {
+                                    "py/tuple": [
+                                        84,
+                                        1,
+                                        2
+                                    ]
+                                },
+                                {
+                                    "py/id": 7
+                                },
+                                false,
+                                {
+                                    "py/b64": "PgQAAN4CAAA/BAAA3gIAAEAEAADfAgAAQgQAAN8CAABGBAAA4wIAAEYEAADnAgAARAQAAOkCAABDBAAA6QIAAEIEAADqAgAAQQQAAOoCAABABAAA6wIAAD8EAADrAgAAPgQAAOwCAAA9BAAA7AIAADwEAADtAgAAOgQAAO0CAAA5BAAA7gIAADcEAADuAgAANgQAAO8CAAA0BAAA7wIAADMEAADwAgAAMQQAAPACAAAwBAAA8QIAAC4EAADxAgAALQQAAPICAAArBAAA8gIAACoEAADzAgAAKQQAAPMCAAAoBAAA9AIAACYEAAD0AgAAJQQAAPUCAAAiBAAA9QIAACEEAAD2AgAAHgQAAPYCAAAdBAAA9wIAABoEAAD3AgAAGQQAAPgCAAAXBAAA+AIAABkEAAD4AgAAGgQAAPcCAAAeBAAA9wIAAB8EAAD2AgAAIgQAAPYCAAAjBAAA9QIAACYEAAD1AgAAJwQAAPQCAAAqBAAA9AIAACsEAADzAgAALQQAAPMCAAAuBAAA8gIAADEEAADyAgAAMgQAAPECAAA1BAAA8QIAADYEAADwAgAAOQQAAPACAAA6BAAA7wIAADwEAADvAgAAPQQAAO4CAABABAAA7gIAAEEEAADtAgAARAQAAO0CAABFBAAA7AIAAEcEAADsAgAASAQAAOsCAABKBAAA6wIAAEsEAADqAgAATAQAAOoCAABNBAAA6QIAAE4EAADpAgAATwQAAOgCAABQBAAA6AIAAFEEAADnAgAAUQQAAOYCAABSBAAA5QIAAFIEAADkAgAAUAQAAOICAABOBAAA4gIAAE0EAADhAgAASgQAAOECAABJBAAA4AIAAEUEAADgAgAARAQAAN8CAABBBAAA3wIAAEAEAADeAgAA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "block_path": "result\\20181108_123750\\masks\\RD normal street\\RD normal street_4.png",
+            "lines": []
+        },
+        {
+            "py/object": "Segmentation.A2D2Object.A2D2_Object",
+            "color_hex": "#ff00ff",
+            "color_hsv": {
+                "py/id": 377
+            },
+            "object_id": 4,
+            "classname": "RD normal street",
             "pixelcount": 428063,
             "percentage": 0.18456082712472405,
             "contours": [
@@ -5659,7 +5771,7 @@
                     ]
                 }
             ],
-            "block_path": "result\\20181108_123750\\masks\\RD normal street\\RD normal street_2.png",
+            "block_path": "result\\20181108_123750\\masks\\RD normal street\\RD normal street_5.png",
             "lines": [
                 [
                     {
@@ -5949,119 +6061,7 @@
             "color_hsv": {
                 "py/id": 377
             },
-            "object_id": 3,
-            "classname": "RD normal street",
-            "pixelcount": 183,
-            "percentage": 7.89010761589404e-05,
-            "contours": [
-                {
-                    "py/reduce": [
-                        {
-                            "py/function": "numpy.core.multiarray._reconstruct"
-                        },
-                        {
-                            "py/tuple": [
-                                {
-                                    "py/type": "numpy.ndarray"
-                                },
-                                {
-                                    "py/tuple": [
-                                        0
-                                    ]
-                                },
-                                {
-                                    "py/b64": "Yg=="
-                                }
-                            ]
-                        },
-                        {
-                            "py/tuple": [
-                                1,
-                                {
-                                    "py/tuple": [
-                                        90,
-                                        1,
-                                        2
-                                    ]
-                                },
-                                {
-                                    "py/id": 7
-                                },
-                                false,
-                                {
-                                    "py/b64": "LwQAAOUCAAAuBAAA5gIAACsEAADmAgAAKgQAAOcCAAAnBAAA5wIAACYEAADoAgAAIwQAAOgCAAAiBAAA6QIAAB8EAADpAgAAHgQAAOoCAAAaBAAA6gIAABkEAADrAgAAFgQAAOsCAAAVBAAA7AIAABIEAADsAgAAEQQAAO0CAAAOBAAA7QIAAA0EAADuAgAACgQAAO4CAAAJBAAA7wIAAAYEAADvAgAABQQAAPACAAABBAAA8AIAAAAEAADxAgAA/QMAAPECAAD8AwAA8gIAAPkDAADyAgAA+AMAAPMCAAD1AwAA8wIAAPQDAAD0AgAA8QMAAPQCAADwAwAA9QIAAO0DAAD1AgAA7AMAAPYCAADpAwAA9gIAAOgDAAD3AgAA5AMAAPcCAADjAwAA+AIAAOADAAD4AgAA3wMAAPkCAADcAwAA+QIAANsDAAD6AgAA2AMAAPoCAADXAwAA+wIAANQDAAD7AgAA1wMAAPsCAADYAwAA+gIAANwDAAD6AgAA3QMAAPkCAADhAwAA+QIAAOIDAAD4AgAA5QMAAPgCAADmAwAA9wIAAOoDAAD3AgAA6wMAAPYCAADvAwAA9gIAAPADAAD1AgAA8wMAAPUCAAD0AwAA9AIAAPgDAAD0AgAA+QMAAPMCAAD9AwAA8wIAAP4DAADyAgAAAgQAAPICAAADBAAA8QIAAAYEAADxAgAABwQAAPACAAALBAAA8AIAAAwEAADvAgAAEAQAAO8CAAARBAAA7gIAABQEAADuAgAAFQQAAO0CAAAZBAAA7QIAABoEAADsAgAAHQQAAOwCAAAeBAAA6wIAACAEAADrAgAAIQQAAOoCAAAjBAAA6gIAACQEAADpAgAAJgQAAOkCAAAnBAAA6AIAACkEAADoAgAAKgQAAOcCAAArBAAA5wIAACwEAADmAgAALgQAAOYCAAAvBAAA5QIAADAEAADlAgAA"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "block_path": "result\\20181108_123750\\masks\\RD normal street\\RD normal street_3.png",
-            "lines": []
-        },
-        {
-            "py/object": "Segmentation.A2D2Object.A2D2_Object",
-            "color_hex": "#ff00ff",
-            "color_hsv": {
-                "py/id": 377
-            },
-            "object_id": 4,
-            "classname": "RD normal street",
-            "pixelcount": 240,
-            "percentage": 0.00010347682119205298,
-            "contours": [
-                {
-                    "py/reduce": [
-                        {
-                            "py/function": "numpy.core.multiarray._reconstruct"
-                        },
-                        {
-                            "py/tuple": [
-                                {
-                                    "py/type": "numpy.ndarray"
-                                },
-                                {
-                                    "py/tuple": [
-                                        0
-                                    ]
-                                },
-                                {
-                                    "py/b64": "Yg=="
-                                }
-                            ]
-                        },
-                        {
-                            "py/tuple": [
-                                1,
-                                {
-                                    "py/tuple": [
-                                        84,
-                                        1,
-                                        2
-                                    ]
-                                },
-                                {
-                                    "py/id": 7
-                                },
-                                false,
-                                {
-                                    "py/b64": "PgQAAN4CAAA/BAAA3gIAAEAEAADfAgAAQgQAAN8CAABGBAAA4wIAAEYEAADnAgAARAQAAOkCAABDBAAA6QIAAEIEAADqAgAAQQQAAOoCAABABAAA6wIAAD8EAADrAgAAPgQAAOwCAAA9BAAA7AIAADwEAADtAgAAOgQAAO0CAAA5BAAA7gIAADcEAADuAgAANgQAAO8CAAA0BAAA7wIAADMEAADwAgAAMQQAAPACAAAwBAAA8QIAAC4EAADxAgAALQQAAPICAAArBAAA8gIAACoEAADzAgAAKQQAAPMCAAAoBAAA9AIAACYEAAD0AgAAJQQAAPUCAAAiBAAA9QIAACEEAAD2AgAAHgQAAPYCAAAdBAAA9wIAABoEAAD3AgAAGQQAAPgCAAAXBAAA+AIAABkEAAD4AgAAGgQAAPcCAAAeBAAA9wIAAB8EAAD2AgAAIgQAAPYCAAAjBAAA9QIAACYEAAD1AgAAJwQAAPQCAAAqBAAA9AIAACsEAADzAgAALQQAAPMCAAAuBAAA8gIAADEEAADyAgAAMgQAAPECAAA1BAAA8QIAADYEAADwAgAAOQQAAPACAAA6BAAA7wIAADwEAADvAgAAPQQAAO4CAABABAAA7gIAAEEEAADtAgAARAQAAO0CAABFBAAA7AIAAEcEAADsAgAASAQAAOsCAABKBAAA6wIAAEsEAADqAgAATAQAAOoCAABNBAAA6QIAAE4EAADpAgAATwQAAOgCAABQBAAA6AIAAFEEAADnAgAAUQQAAOYCAABSBAAA5QIAAFIEAADkAgAAUAQAAOICAABOBAAA4gIAAE0EAADhAgAASgQAAOECAABJBAAA4AIAAEUEAADgAgAARAQAAN8CAABBBAAA3wIAAEAEAADeAgAA"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "block_path": "result\\20181108_123750\\masks\\RD normal street\\RD normal street_4.png",
-            "lines": []
-        },
-        {
-            "py/object": "Segmentation.A2D2Object.A2D2_Object",
-            "color_hex": "#ff00ff",
-            "color_hsv": {
-                "py/id": 377
-            },
-            "object_id": 6,
+            "object_id": 5,
             "classname": "RD normal street",
             "pixelcount": 2107,
             "percentage": 0.0009084402593818985,

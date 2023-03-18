@@ -148,7 +148,6 @@ normalized_sum = sum(normalized)
 factor = 100.0 / normalized_sum
 normalized_values = [x * factor for x in normalized]
 fig = go.Figure(data=[go.Pie(labels=new_labels, values=normalized_values)])
-fig.update_layout(title='Piechart with categories and percentages')
 with row5_2:
     st.plotly_chart(fig, use_column_width=True)
 

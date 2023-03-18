@@ -1,3 +1,5 @@
+import collections
+
 import cv2
 import jsonpickle as jsonpickle
 import numpy as np
@@ -83,7 +85,7 @@ for scene in scene_list:
             # Count number of pixels in color block
             pixel_count = cv2.countNonZero(cv2.cvtColor(new_image, cv2.COLOR_BGR2GRAY))
 
-            # Areas smaller than 40 pixels are ignored
+            # Areas smaller than 55 pixels are ignored
             if pixel_count <= 55:
                 continue
             count += 1
@@ -118,7 +120,6 @@ for scene in scene_list:
                     continue
                 for pre_contour in pre_obj.contours:
                     if min_contour_distance(pre_contour,contour) < 32:
-                        print(pre_obj.lines, obj.lines)
                         dist_matrix = np.zeros((len(pre_obj.lines), len(obj.lines)))
                         for i in range(len(pre_obj.lines)):
                             pre_line = LineString([(pre_obj.lines[i][0], pre_obj.lines[i][1]),
@@ -132,15 +133,18 @@ for scene in scene_list:
                             flag = True
                             break
                 if flag:
-                    pre_obj.contours = pre_obj.contours + obj.contours
-                    pre_obj.lines = pre_obj.lines + obj.lines
-                    pre_obj.pixelcount += obj.pixelcount
-                    pre_obj.percentage += obj.percentage
-                    break
-            if not flag:
-                scene.objectlist.append(obj)
+                        obj.contours = pre_obj.contours + obj.contours
+                        obj.lines = pre_obj.lines + obj.lines
+                        obj.pixelcount += pre_obj.pixelcount
+                        obj.percentage += pre_obj.percentage
+                        scene.objectlist.remove(pre_obj)
+                        flag = False
+            scene.objectlist.append(obj)
 
+    class_dict = collections.defaultdict(int)
     for obj in scene.objectlist:
+        obj.object_id = class_dict[obj.classname] + 1
+        class_dict[obj.classname] += 1
         new_image = np.zeros_like(image)
         for contour in obj.contours:
             cv2.drawContours(new_image, [contour], 0, (255, 255, 255), -1)
