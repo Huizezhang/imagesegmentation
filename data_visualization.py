@@ -107,6 +107,7 @@ row5_spacer1, row5_1, row5_spacer2, row5_2, row5_spacer3 = st.columns((.2, 2.3, 
 with row5_1:
     st.markdown(
         "This graph reflects the number of some important objects in a certain scene. The x-axis is the category of the object, and the y-axis is the number of objects.")
+    st.markdown("The following eight objects are counted: Car, Bicycle, Pedestrian, Truck, Small vehicles, Traffic signal, Traffic sign, Utility vehicle")
     selected_scene2 = st.selectbox('Select scene', scene_id_list,key="h1")
 scene_id = selected_scene2
 save_json = os.path.join(os.path.join(output_folder_path, scene_id), f'{scene_id}.json')
